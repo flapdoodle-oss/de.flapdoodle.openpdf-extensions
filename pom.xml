@@ -9,9 +9,10 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.flapdoodle.openpdf-extensions</groupId>
-    <artifactId>de.flapdoodle.openpdf-extensions</artifactId>
+    <artifactId>de.flapdoodle.openpdf-extensions-pom</artifactId>
     <name>Flapdoodle OpenPDF Extensions</name>
-    <version>1.3.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <description>openPdf extensions</description>
     <url>http://github.com/flapdoodle-oss/de.flapdoodle.openpdf-extensions</url>
@@ -30,28 +31,7 @@
         <url>git@github.com:flapdoodle-oss/de.flapdoodle.openpdf-extensions.git</url>
     </scm>
 
-    <properties>
-        <immutables.version>2.7.5</immutables.version>
-    </properties>
-
-    <dependencies>	
-        <dependency>
-            <groupId>org.immutables</groupId>
-            <artifactId>value</artifactId>
-            <version>${immutables.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.immutables</groupId>
-            <artifactId>builder</artifactId>
-            <version>${immutables.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.github.librepdf</groupId>
-            <artifactId>openpdf</artifactId>
-            <version>1.3.7</version>
-        </dependency>
-    </dependencies>
+    <modules>
+        <module>java</module>
+    </modules>
 </project>
