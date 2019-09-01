@@ -11,7 +11,6 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>de.flapdoodle.openpdf-extensions</artifactId>
     <name>Flapdoodle OpenPDF Extensions</name>
-    <version>1.0.0-SNAPSHOT</version>
 
     <description>openPdf extensions</description>
 
