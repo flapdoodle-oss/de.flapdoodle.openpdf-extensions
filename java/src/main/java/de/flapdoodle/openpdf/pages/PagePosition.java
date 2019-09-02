@@ -14,43 +14,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.flapdoodle.openpdf.types;
+package de.flapdoodle.openpdf.pages;
 
-import org.immutables.value.Value.Default;
 import org.immutables.value.Value.Immutable;
+import org.immutables.value.Value.Parameter;
 
 @Immutable
-public interface Margin {
-	@Default
-	default float top() {
-		return 0;
-	}
+public interface PagePosition {
+	@Parameter
+	float x();
 
-	@Default
-	default float left() {
-		return 0;
-	}
+	@Parameter
+	float y();
 
-	@Default
-	default float right() {
-		return 0;
-	}
+	public static ImmutablePagePosition ZERO = of(0, 0);
 
-	@Default
-	default float bottom() {
-		return 0;
-	}
-
-	public static ImmutableMargin of(float top, float left, float right, float bottom) {
-		return Margin.builder()
-				.top(top)
-				.left(left)
-				.right(right)
-				.bottom(bottom)
-				.build();
-	}
-
-	public static ImmutableMargin.Builder builder() {
-		return ImmutableMargin.builder();
+	public static ImmutablePagePosition of(float x, float y) {
+		return ImmutablePagePosition.of(x, y);
 	}
 }

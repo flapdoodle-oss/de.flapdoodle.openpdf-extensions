@@ -16,41 +16,20 @@
  */
 package de.flapdoodle.openpdf.types;
 
-import org.immutables.value.Value.Default;
 import org.immutables.value.Value.Immutable;
+import org.immutables.value.Value.Parameter;
 
 @Immutable
-public interface Margin {
-	@Default
-	default float top() {
-		return 0;
-	}
+public interface Position {
+	@Parameter
+	float x();
 
-	@Default
-	default float left() {
-		return 0;
-	}
+	@Parameter
+	float y();
 
-	@Default
-	default float right() {
-		return 0;
-	}
+	public static Position ZERO = of(0, 0);
 
-	@Default
-	default float bottom() {
-		return 0;
-	}
-
-	public static ImmutableMargin of(float top, float left, float right, float bottom) {
-		return Margin.builder()
-				.top(top)
-				.left(left)
-				.right(right)
-				.bottom(bottom)
-				.build();
-	}
-
-	public static ImmutableMargin.Builder builder() {
-		return ImmutableMargin.builder();
+	public static Position of(float x, float y) {
+		return ImmutablePosition.of(x, y);
 	}
 }
