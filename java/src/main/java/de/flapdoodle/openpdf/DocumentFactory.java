@@ -24,6 +24,7 @@ import org.immutables.value.Value.Default;
 import org.immutables.value.Value.Immutable;
 
 import com.lowagie.text.Document;
+import com.lowagie.text.PageSize;
 import com.lowagie.text.Rectangle;
 import com.lowagie.text.pdf.PdfName;
 import com.lowagie.text.pdf.PdfPageEvent;
@@ -43,7 +44,10 @@ public abstract class DocumentFactory {
 			.top(50).left(50).right(50).bottom(50)
 			.build();
 
-	protected abstract Rectangle pageSize();
+	@Default
+	protected Rectangle pageSize() {
+		return PageSize.A4;
+	}
 
 	protected abstract Optional<PdfPageEvent> onPageEvents();
 

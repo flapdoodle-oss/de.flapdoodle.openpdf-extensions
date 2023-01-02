@@ -30,3 +30,6 @@ hs_err_pid*
 
 /java/target/
 /kotlin/target/
+
+nb-configuration.xml
+
